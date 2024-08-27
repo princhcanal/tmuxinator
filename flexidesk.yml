@@ -1,7 +1,7 @@
-# /Users/princhcanal/.config/tmuxinator/planning.yml
+# /Users/princhcanal/.config/tmuxinator/flexidesk.yml
 
-name: planning
-root: ~/projects/craftworks/craftworks-planning
+name: flexidesk
+root: ~/projects/craftworks/craftworks-flexidesk
 
 # Optional tmux socket
 # socket_name: foo
@@ -45,10 +45,10 @@ root: ~/projects/craftworks/craftworks-planning
 # attach: false
 
 windows:
-  - planning:
+  - flexidesk:
       layout: main-vertical
       panes:
-        - cd craftworks-resource-planning-overview-tool-frontend && nvim
+        - cd craftworks-flexidesk-frontend && nvim
         - gst
-        - docker compose up db redis
-        - cd craftworks-resource-planning-overview-tool-frontend && npm start
+        - docker compose up --build keycloak-db keycloak db
+        - cd craftworks-flexidesk-frontend && npm start
