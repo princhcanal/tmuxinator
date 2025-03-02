@@ -53,8 +53,11 @@ windows:
         - gst
         - cd admin && docker compose up postgres
         - cd admin && yarn dev
-        - stripe listen --forward-to localhost:3000/api/stripe/subscription-webhook
-        - stripe listen --forward-to localhost:3000/api/stripe/customer-webhook
+        - stripe listen --forward-to "localhost:3001/api/stripe/subscription-webhook?region=GB"
+        - stripe listen --forward-to "localhost:3000/api/stripe/customer-webhook?region=GB"
+        - stripe listen --forward-to "localhost:3000/api/stripe/payment-method-webhook?region=GB"
+        - stripe listen --forward-to "localhost:3000/api/stripe/setup-intent-webhook?region=GB"
+        - stripe listen --forward-to "localhost:3000/api/stripe/refund-webhook?region=GB"
   - consumer-api:
       root: ~/projects/winedrops/winedrops-consumer-api
       layout: main-vertical
@@ -69,3 +72,10 @@ windows:
         - nvim
         - gst
         - yarn start:dev-local
+  - web:
+      root: ~/projects/winedrops/winedrops-web
+      layout: main-vertical
+      panes:
+        - nvim
+        - gst
+        - yarn dev
