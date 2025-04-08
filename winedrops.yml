@@ -64,7 +64,7 @@ windows:
       panes:
         - nvim
         - gst
-        - cd functions && nvm use 18 && yarn serve
+        - cd functions && nvm use 20 && yarn serve
   - mobile:
       root: ~/projects/winedrops/winedrops-mobile
       layout: main-vertical
