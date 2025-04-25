@@ -51,4 +51,4 @@ windows:
         - nvim
         - gst
         - docker compose up postgres
-        - pnpm dev
+        - nvm use && pnpm dev
