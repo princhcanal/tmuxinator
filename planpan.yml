@@ -46,9 +46,7 @@ root: ~/projects/personal/planpan
 
 windows:
   - planpan:
-      layout: main-vertical
+      layout: vertical
       panes:
-        - nvim
         - gst
-        - docker compose up postgres
         - nvm use && pnpm dev
