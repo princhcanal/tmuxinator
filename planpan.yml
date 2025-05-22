@@ -49,4 +49,5 @@ windows:
       layout: vertical
       panes:
         - gst
+        - pnpm dlx trigger.dev@latest dev
         - nvm use && pnpm dev
