@@ -60,22 +60,19 @@ windows:
         - stripe listen --forward-to "localhost:3000/api/stripe/refund-webhook?region=GB"
   - consumer-api:
       root: ~/projects/winedrops/winedrops-consumer-api
-      layout: main-vertical
+      layout: vertical
       panes:
-        - nvim
         - gst
         - cd functions && nvm use 20 && yarn serve
   - mobile:
       root: ~/projects/winedrops/winedrops-mobile-app
-      layout: main-vertical
+      layout: vertical
       panes:
-        - nvim
         - gst
         - yarn dev
   - web:
       root: ~/projects/winedrops/winedrops-web
-      layout: main-vertical
+      layout: vertical
       panes:
-        - nvim
         - gst
         - yarn dev
