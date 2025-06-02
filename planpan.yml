@@ -49,5 +49,5 @@ windows:
       layout: vertical
       panes:
         - gst
-        - cd packages/api && pnpm trigger:dev
+        - nvm use && cd packages/api && pnpm trigger:dev
         - nvm use && pnpm dev
